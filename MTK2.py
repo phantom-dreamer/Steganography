@@ -1,5 +1,12 @@
 
 ArrayBytesCodRule = ["11111", "00000", "11011", "00100", "00010", "01000"]
+#11111	Буквы латинские
+#00000	Буквы русские
+#11011	Цифры
+#00100	Пробел
+#00010	Возврат каретки
+#00010	Возврат каретки
+
 
 ArrayBytesCod = ["11000", "10011", "01110", "10010", "10000", "10110", "01011", "00101", "01100",
                  "11010", "11110", "01001", "00111", "00110", "00011", "01101", "11101", "01010",
@@ -87,13 +94,12 @@ def MTK2_code(text):
             for j in range(len(ArraySpecialUp)):
                 if text[i] == ArraySpecialUp[j] or text[i] == ArraySpecialLow[j]:
                     bytes_mass += ArrayBytesCod[j]
-                    
 
     return bytes_mass
 
 
 if __name__ == '__main__':
-    text = "бог сделал людей, кольт сделал их равными"
+    #text = "Привет Мир= Hello world1234 Текст (Proverka)"
     print(text)
     MtK2 = MTK2_code(text)
     print(MtK2)
